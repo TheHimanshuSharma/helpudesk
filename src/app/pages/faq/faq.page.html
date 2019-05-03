@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="textalign">FAQ</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card padding>
+    <ion-card-content>
+
+      <!-- Display the visible portion of text -->
+      <h2 (click)="toggleAccordion()">
+        Question
+        <!-- Display toggle button -->
+        <span *ngIf="isMenuOpen">&#9650;</span>
+        <span *ngIf="!isMenuOpen">&#9660;</span>
+      </h2>
+
+      <!-- Display the expandable section of text -->
+      <div [ngClass]="this.isMenuOpen ? 'active' : 'inactive'">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit molestiae, nihil maiores animi quos velit unde perferendis a fuga vel nostrum ea nobis expedita, officia beatae! Harum explicabo voluptatum commodi.</p>
+      </div>
+
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

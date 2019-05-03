@@ -1,0 +1,32 @@
+<!-- <ion-item class="subitem" text-wrap detail="false" lines="none">
+  <ion-row no-padding align-items-center>
+    <ion-col size="9">
+      <ion-row no-padding>
+        <ion-col size="12">
+          <h3>Question 1</h3>
+        </ion-col>
+        <ion-col size="12">
+          <p color="medium">Answer to Question no. 1</p>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+    <ion-col size="3" text-right>
+      <ion-button fill="outline" (click)="buyItem(expandable)">OK</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-item>  -->
+<ion-content>
+<h2 (click)="toggleAccordion()">
+    Text
+     <span *ngIf="isMenuOpen">&#9650;</span>
+     <span *ngIf="!isMenuOpen">&#9660;</span>
+  </h2>
+  <div
+     [ngClass]="this.isMenuOpen ? 'active' : 'inactive'">
+     <section class="image-wrapper">
+         <img [src]="image">
+     </section>
+     <p>Question</p>
+     <p>Answer</p>
+  </div>
+</ion-content>

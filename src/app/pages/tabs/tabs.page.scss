@@ -1,0 +1,11 @@
+ion-tab-bar{
+    overflow-x: scroll;
+    justify-content: left;
+}
+
+//::-webkit-scrollbar,
+.invisiblescrollbar::-webkit-scrollbar-thumb {
+    // overflow-x: scroll;
+    // display: none;
+    background: #000; 
+}

@@ -1,0 +1,48 @@
+<ion-app>
+  <ion-split-pane>
+    <ion-menu>
+
+      <ion-header>
+        <ion-toolbar class="bgcolor">
+
+          <ion-item class="bgcolor">
+            <ion-avatar class="avatarsize" slot="start">
+              <img src = "../../assets/img/him.jpg">
+            </ion-avatar>
+            <ion-label>
+              <h2>Harry Sharma</h2>
+              <p>Student</p>
+              <ion-chip class="chipalign" slot="end" (click)="goToProfile()">
+                <ion-icon name="home"></ion-icon>
+                <ion-label>Edit</ion-label>
+              </ion-chip>
+              <ion-chip class="chipalign" slot="end">
+                <ion-icon name="home"></ion-icon>
+                <ion-label>Delete</ion-label>
+              </ion-chip>
+            </ion-label>            
+          </ion-item>
+
+        </ion-toolbar>
+      </ion-header>
+
+      <!-- Menu Content Begins -->
+
+      <ion-content>
+        <ion-list class="bgcolor">   
+          <ion-title class="titlebg" color="dark">Menu</ion-title>
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
+            <ion-item [routerLink]="[p.url]" class="bgcolor">
+              <ion-icon slot="start" [name]="p.icon"></ion-icon>
+              <ion-label>
+                {{p.title}}
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+
+    </ion-menu>
+    <ion-router-outlet main></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>
